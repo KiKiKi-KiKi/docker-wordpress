@@ -112,4 +112,19 @@ RUN { \
     echo 'html_errors = Off'; \
   } > /usr/local/etc/php/conf.d/error-logging.ini
 
+# Install MySQL client
+RUN apt-get update && apt-get -q -y install default-mysql-client
+RUN docker-php-ext-install pdo_mysql mysqli
+
+# Install WP-CLI
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+  && chmod +x wp-cli.phar \
+  && mv wp-cli.phar /usr/local/bin/wp \
+  && wp --info
+
+# Setup Composer
+COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
+RUN composer config -g process-timeout 3600 && \
+  composer config -g repos.packagist composer https://packagist.org
+
 VOLUME /var/www/html
