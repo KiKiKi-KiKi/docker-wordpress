@@ -27,3 +27,5 @@ destroy:
 	rm -rf src/web/app/languages/*
 wp:
 	docker compose exec php bash
+db:
+	docker compose exec php mysql -h db -u root -p

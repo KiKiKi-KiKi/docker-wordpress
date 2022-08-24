@@ -62,6 +62,15 @@ $ docker compose up
 
 Access: `http://localhost:80`
 
+
+### Access database
+
+```sh
+$ docker compose exec php mysql -h db -u root -p
+```
+
+---
+
 ## :wastebasket: Destroy Development Environment
 
 ```sh
