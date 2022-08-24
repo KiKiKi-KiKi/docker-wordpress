@@ -24,5 +24,6 @@ destroy:
 	@make clear-log
 	@make delete-db
 	rm -rf src/web/app/uploads/*
+	rm -rf src/web/app/languages/*
 wp:
 	docker compose exec php bash
