@@ -123,7 +123,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
   && wp --info
 
 # Setup Composer
-COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 RUN composer config -g process-timeout 3600 && \
   composer config -g repos.packagist composer https://packagist.org
 
