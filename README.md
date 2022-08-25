@@ -3,6 +3,7 @@
 use [Bedrock](https://roots.io/bedrock/) & docker compose
 
 cf.
+
 - https://qiita.com/ttsuru/items/4d893b30b2be3f0e5e2f
 - https://www.tolog.info/wordpress/bedrock-docker/
 
@@ -25,7 +26,21 @@ cf.
 
 ## Development Environment Setup
 
-### :memo: Setup
+### :memo: Setup VSCode
+
+```sh
+$ cp .vscode/settings.sample.json .vscode/settings.json
+```
+
+#### PHP Intelephense に WordPress を認識させる
+
+1. VSCode settings
+2. `intelephense.stubs` を検索
+3. `Add Item` をクリックし `wordpress` を追加
+
+cf. https://blog-and-destroy.com/36008
+
+### :seedling: Setup
 
 #### 1. Database, PHP を本番環境にあわせる
 

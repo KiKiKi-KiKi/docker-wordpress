@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "wordpresstoolbox.wordpress-toolbox",
+    "zignd.html-css-class-completion",
+    "bmewburn.vscode-intelephense-client",
+    "xdebug.php-debug",
+    "yogensia.searchwpdocs",
+    "anthonydiametrix.acf-snippet",
+    "shevaua.phpcs",
+    "persoderlind.vscode-phpcbf"
+  ]
+}

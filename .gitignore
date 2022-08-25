@@ -6,4 +6,7 @@
 
 **/*.log
 
+# VSCode
+.vscode/settings.json
+
 !.gitkeep

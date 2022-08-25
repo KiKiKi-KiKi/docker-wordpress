@@ -1,0 +1,38 @@
+{
+  "css.validate": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "[php]": {
+    "phpcs.standard": "WordPress",
+    "phpcbf.standard": "WordPress",
+    "phpcbf.onsave": true,
+    "files.eol": "\n"
+  },
+  "markdown.preview.breaks": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "bounded"
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
+}
