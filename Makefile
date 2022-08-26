@@ -19,6 +19,8 @@ init:
 	touch docker/php/var/php-error.log
 	docker compose up -d
 	docker compose exec php composer install
+	docker compose exec php chmod +x /var/tmp/scripts/install.sh
+	docker compose exec php bash /var/tmp/scripts/install.sh
 destroy:
 	@make down
 	@make clear-log

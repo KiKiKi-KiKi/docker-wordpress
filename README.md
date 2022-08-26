@@ -18,6 +18,9 @@ cf.
   |    |- /db
   |    |- /nginx
   |    |- /php
+  |    |- /wordpress
+  |         |- /scripts ... WP-CLI scripts
+  |             |- install.sh
   |- /src ... WordPress with Bedrock
   |- /theme ... WordPress theme
   |- .env
@@ -56,6 +59,8 @@ $ cp .env.sample .env
 $ cp docker/bedrock/.env.sample docker/bedrock/.env.development
 ```
 
+`.env.development` を環境に合わせて編集してください
+
 ### 3. log ファイルの作成
 
 ```sh
@@ -69,6 +74,12 @@ $ docker compose up -d
 $ docker compose exec php composer install
 ```
 
+### 5. Install WordPress with WP-CLI
+
+```sh
+$ docker compose exec php bash /var/tmp/scripts/install.sh
+```
+
 ## :construction: Dev Server
 
 ```sh
@@ -76,7 +87,6 @@ $ docker compose up
 ```
 
 Access: `http://localhost:80`
-
 
 ### Access database
 
